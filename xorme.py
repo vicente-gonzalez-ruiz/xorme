@@ -1,4 +1,6 @@
 import sys
 
-for byte in sys.stdin.buffer.read():
-  print(chr(byte^1), end='')
+for i in sys.stdin.buffer.read().decode("utf8"):
+    #print(chr(ord(i)^1), end='')
+    sys.stdout.buffer.write(chr(ord(i)^1).encode("utf8"))
+  
